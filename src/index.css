@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Scrollbar Styles */
+.custom-scrollbar {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #F5B544 transparent; /* Firefox */
+}
+
+/* Webkit browsers (Chrome, Safari, Edge) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px; /* Thinner width */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #F5B544;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #f0a832;
+}
+
+/* Hide scrollbar buttons and make it appear on hover */
+.custom-scrollbar::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* Only show scrollbar on hover */
+.custom-scrollbar {
+  scrollbar-width: none; /* Firefox */
+}
+
+.custom-scrollbar:hover {
+  scrollbar-width: thin; /* Firefox */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-scrollbar:hover::-webkit-scrollbar {
+  display: block;
+}
